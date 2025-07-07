@@ -746,6 +746,9 @@ require('lazy').setup({
         --      },
         --    },
         --  },
+        --
+        --
+        phpactor = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -833,6 +836,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         vue = { 'eslint_d', 'eslint', stop_after_first = true },
         typescript = { 'eslint_d', 'eslint', stop_after_first = true },
+        php = { 'php_cs_fixer' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -1041,10 +1045,10 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
