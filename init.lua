@@ -89,6 +89,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.o.expandtab = true -- Use spaces instead of tabs
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -151,6 +152,8 @@ vim.o.splitbelow = true
 --   and `:help lua-options-guide`
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.tabstop = 2 -- Set tabstop to 2 spaces
+vim.opt.shiftwidth = 2 -- Set shiftwidth to 2 spaces
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
