@@ -837,8 +837,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        vue = { 'eslint_d', 'eslint', stop_after_first = true },
-        typescript = { 'eslint_d', 'eslint', stop_after_first = true },
+        vue = { 'eslint_d', stop_after_first = true },
+        typescript = { 'eslint_d', stop_after_first = true },
         php = { 'php_cs_fixer' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
@@ -929,6 +929,15 @@ require('lazy').setup({
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+
+          copilot = {
+            name = 'copilot',
+            enabled = true,
+            module = 'blink-cmp-copilot',
+            kind = 'Copilot',
+            score_offset = 100, -- the higher the number, the higher the priority
+            async = true,
+          },
         },
       },
 
