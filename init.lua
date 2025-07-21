@@ -202,8 +202,16 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Navigate buffers using Shift+H and Shift+L
+vim.keymap.set('n', 'H', ':bprevious<CR>', { desc = 'Go to previous buffer' })
+vim.keymap.set('n', 'L', ':bnext<CR>', { desc = 'Go to next buffer' })
+
 -- LazyGit
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'Open lazyGit' })
+
+-- Buffers
+vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = 'Buffer next' })
+vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = 'Buffer previous' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -741,18 +749,6 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
-        --  vue_ls = {
-        --    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-        --    capabilities = capabilities,
-        --    init_options = {
-        --      vue = {
-        --        hybridMode = true,
-        --      },
-        --      typescript = {
-        --        tsdk = '/home/smelezan/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/',
-        --      },
-        --    },
-        --  },
         --
         --
         phpactor = {},
