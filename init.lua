@@ -209,10 +209,6 @@ vim.keymap.set('n', 'L', ':bnext<CR>', { desc = 'Go to next buffer' })
 -- LazyGit
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'Open lazyGit' })
 
--- Buffers
-vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = 'Buffer next' })
-vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = 'Buffer previous' })
-
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
