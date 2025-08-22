@@ -103,7 +103,7 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -249,6 +249,10 @@ rtp:prepend(lazypath)
 require 'custom.commands'
 
 require 'custom.commands.i18n'
+vim.keymap.set('n', '<leader>ia', ':I18nAdd<CR>', { desc = 'Add i18n translation' })
+vim.keymap.set('n', '<leader>iu', ':I18nUpdate<CR>', { desc = 'Update i18n translation' })
+vim.keymap.set('n', '<leader>il', ':I18nList<CR>', { desc = 'List i18n translations' })
+vim.keymap.set('n', '<leader>iv', ':I18nValidate<CR>', { desc = 'Validate i18n JSON files' })
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
